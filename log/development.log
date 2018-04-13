@@ -7012,3 +7012,104 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "color", "defaultStatus", "link", "created_at", "updated_at", "icon") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Google"], ["description", "Search Engine"], ["color", "Red"], ["defaultStatus", "t"], ["link", "http://www.google.com"], ["created_at", "2018-04-13 07:02:22.992659"], ["updated_at", "2018-04-13 07:02:22.992659"], ["icon", "fab fa-google"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "color", "defaultStatus", "link", "created_at", "updated_at", "icon") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wisc"], ["description", "UW homepage"], ["color", "Blue"], ["defaultStatus", "f"], ["link", "http://www.wisc.edu"], ["created_at", "2018-04-13 07:02:22.995226"], ["updated_at", "2018-04-13 07:02:22.995226"], ["icon", "fas fa-home"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "color", "defaultStatus", "link", "created_at", "updated_at", "icon") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "GLBRC"], ["description", "Great Lakes Bioenergy Research Center"], ["color", "Yellow"], ["defaultStatus", "t"], ["link", "http://www.glbrc.org"], ["created_at", "2018-04-13 07:02:22.997748"], ["updated_at", "2018-04-13 07:02:22.997748"], ["icon", "fas fa-users"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "color", "defaultStatus", "link", "created_at", "updated_at", "icon") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "WEI"], ["description", "Wisconsin Energy Institute"], ["color", "Green"], ["defaultStatus", "f"], ["link", "http://energy.wisc.edu/"], ["created_at", "2018-04-13 07:02:22.999869"], ["updated_at", "2018-04-13 07:02:22.999869"], ["icon", "fas fa-burn"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "color", "defaultStatus", "link", "created_at", "updated_at", "icon") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Twitter"], ["description", "Twitter"], ["color", "Purple"], ["defaultStatus", "f"], ["link", "http://twitter.com/"], ["created_at", "2018-04-13 07:02:23.002342"], ["updated_at", "2018-04-13 07:02:23.002342"], ["icon", "fab fa-twitter"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "user_apps"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user1@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user1@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "user1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "login", "first") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "user1@example.com"], ["encrypted_password", "$2a$11$0HBEY2kp9N8IKvzcvF9nReGsqJ9TZEUaCSFsggVYe/KAdjj9Kx3O."], ["created_at", "2018-04-13 07:02:23.158203"], ["updated_at", "2018-04-13 07:02:23.158203"], ["login", "user1"], ["first", "t"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user2@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user2@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "user2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "login", "first") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "user2@example.com"], ["encrypted_password", "$2a$11$7m2OEp820OnojitbseM2T.HolM.P/FYJTj5OvhTMEY8H67UnKdaKu"], ["created_at", "2018-04-13 07:02:23.282712"], ["updated_at", "2018-04-13 07:02:23.282712"], ["login", "user2"], ["first", "t"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user3@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user3@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "user3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "login", "first") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "user3@example.com"], ["encrypted_password", "$2a$11$oHbNGEjJojnGRUoTouLRB.SSs/KlP2ybp/gOUCeGT3kA1zSi1rp9W"], ["created_at", "2018-04-13 07:02:23.407816"], ["updated_at", "2018-04-13 07:02:23.407816"], ["login", "user3"], ["first", "t"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-13 02:02:35 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 229ms (Views: 212.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-13 02:02:39 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rdJP8V3ZK7K8Ll74LvwMRUInWFbbM4PnTrC93O2B/Yy8a+FxqKmImVJT28/wJCPd8wpGEusTMp4kizJcCpw1dg==", "user"=>{"login"=>"user1", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["login", "user1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-04-13 07:02:40.062860"], ["last_sign_in_at", "2018-04-13 07:02:40.062860"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-04-13 07:02:40.063837"], ["id", 26]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 146ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-13 02:02:40 -0500
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT "applications".* FROM "applications"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_apps" ("app_id", "user_id", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["app_id", 36], ["user_id", 26], ["position", 36], ["created_at", "2018-04-13 07:02:40.119815"], ["updated_at", "2018-04-13 07:02:40.119815"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_apps" ("app_id", "user_id", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["app_id", 38], ["user_id", 26], ["position", 38], ["created_at", "2018-04-13 07:02:40.125207"], ["updated_at", "2018-04-13 07:02:40.125207"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "user1@example.com"], ["id", 26], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["login", "user1"], ["id", 26], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first", "f"], ["updated_at", "2018-04-13 07:02:40.131688"], ["id", 26]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUserApp Load (0.2ms)[0m  [1m[34mSELECT "user_apps".* FROM "user_apps" WHERE "user_apps"."user_id" = ?[0m  [["user_id", 26]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 79ms (Views: 27.0ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-13 02:02:42 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"r1JkLfS3Dm8zcHnGaBrMnLXr0Xvd4ShjQBqwypdF7IwcXjlKpkOVySMoiM+Jd3q7fhnS3W+LIwwGTuF6QKBvFA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-13 02:02:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
