@@ -35,11 +35,6 @@ users.each do |user|
     data.email = "#{user}@example.com"
     data.password = "glbrcpass"
     data.password_confirmation = "glbrcpass"
+    data.first = true
     data.save!
-    app = Application.all
-    app.each do |a|
-      if a.defaultStatus
-        UserApp.create app_id: a.id, user_id: data.id, position: a.id
-      end
-    end
 end

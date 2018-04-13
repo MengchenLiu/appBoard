@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete "/home" => "home#destroy"
   post "/home" => "home#sort"
 
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do

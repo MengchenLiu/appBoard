@@ -1,6 +1,18 @@
 class HomeController < ApplicationController
+
   def index
     @user = User.find_by(id:current_user.id)
+
+    if @user.first
+      application = Application.all
+      application.each do |a|
+        if a.defaultStatus
+          UserApp.create app_id: a.id, user_id: @user.id, position: a.id
+        end
+      end
+      @user.first = false
+      @user.save
+    end
     @app_id = UserApp.where(user_id:current_user.id)
     @app = @app_id.sort_by{|i| i.position}.map{|i| Application.find_by(id:i.app_id)}
   end
