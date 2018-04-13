@@ -1,0 +1,23 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/home/new">
+    <i class="fas fa-plus"></i>
+    Add more to home
+  </a>
+</nav>
+
+<div id="sortable" class="grid-container" data-update-url="/home">
+  <% @app.each do |a| %>
+    <%= content_tag_for(:div , a, class:"grid-item", id: dom_id(a) ) do  %>
+      <%= link_to a.name, a.link %>
+
+      <div style="font-size:3em; color:<%=a.color%>">
+        <i class="<%=a.icon%>"></i>
+      </div>
+      <p><%=a.description%></p>
+      <%= button_to "Remove", "/home?app_id=#{a.id}", method: :delete , class:"btn btn-outline-secondary"%>
+
+    <%end%>
+  <%end%>
+
+</div>
+<%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn btn-outline-secondary" %>

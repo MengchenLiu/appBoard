@@ -1,0 +1,7 @@
+
+<div class="list-group">
+  <% @unused.each do |a| %>
+    <%= button_to a.name, "/home/new?app_id=#{a.id}", method: :post,class:"list-group-item list-group-item-action" %>
+  <%end%>
+
+</div>
