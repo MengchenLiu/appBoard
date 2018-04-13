@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+* Download the zip
 
-* Ruby version
+* unzip the file
 
-* System dependencies
+* cd appBoard
 
-* Configuration
+* rails db:migrate
 
-* Database creation
+* rails db:seed
 
-* Database initialization
+* rails s
 
-* How to run the test suite
+* you can see the app on localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* once sign in with user1(username) glbrcpass(password), you can see the app board home page
